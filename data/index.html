@@ -1,0 +1,29 @@
+<!DOCTYPE HTML><html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DC Motor Speed Control Web Server</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>Hovercraft Control Interface</h2>
+        
+        <!--elevation slider-->
+        <h3>Elevation</h3>
+        <p><span id="textslider_value_elevation">0</span></p>
+        <p><input type="range" onchange="updateSliderPWM(this, 'elevation')" id="pwmSlider1" min="0" max="255" value="0" step="1" class="slider"></p>
+        
+        <!--throttle slider-->
+        <h3>Throttle</h3>
+        <p><span id="textslider_value_throttle">0</span></p>
+        <p><input type="range" onchange="updateSliderPWM(this, 'throttle')" id="pwmSlider2" min="0" max="255" value="0" step="1" class="slider"></p>
+        
+        <!--steering slider-->
+        <h3>Steering</h3>
+        <p><span id="textslider_value_steering">90</span>&deg;</p>
+        <p><input type="range" onchange="updateSliderPWM(this, 'steering')" id="pwmSlider3" min="0" max="180" value="90" step="1" class="slider"></p>
+        <p><button type="button" onclick="resetSteering()" class="button">Set steering straight</button></p>
+        
+        <!--adding javascript-->
+        <script src="index.js" type="text/javascript"></script>
+    </body>
+</html>
