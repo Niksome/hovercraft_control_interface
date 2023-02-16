@@ -8,7 +8,7 @@ const char index_html[] PROGMEM = R"rawliteral(
     //put your html here
 )rawliteral";
 ````
-Then put these lines in the setup method in the ```hovercreft.ino```:
+Then put these lines in the setup method in the ```hovercraft.ino```:
 ````
 server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(200, "text/html", index_html);
