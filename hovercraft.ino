@@ -28,7 +28,7 @@ String slider_value_steering = "0";
 const char *input_parameter = "value";
 
 const char *ssid = "ESP32 Access-Point";
-const char *password = "studentec";
+const char *password = "password";
 
 AsyncWebServer server(80);
 
