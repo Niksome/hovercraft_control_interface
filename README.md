@@ -7,10 +7,10 @@ If you have problems with uploading the files from the data folder then try addi
 const char index_html[] PROGMEM = R"rawliteral(
     //put your html here
 )rawliteral";
-```
+````
 Then put these lines in the setup method in the ```hovercreft.ino```:
-```
+````
 server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send(200, "text/html", index_html);
             Serial.println("HTML loaded"); });
-```
+````
